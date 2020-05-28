@@ -1,0 +1,20 @@
+<p *ngIf="message">
+  <ngb-alert type="danger" [dismissible]="false">
+    <strong>Error!</strong> {{message}}
+  </ngb-alert>
+</p>
+
+<div class="mb-3 text-center d-flex justify-content-center">
+  <div class="w-25 card mb-4 box-shadow">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Login</h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="user" (ngSubmit)="onSubmit()">
+        <input placeholder="Username" formControlName="username" type="text">
+        <input class="mt-3" placeholder="Password" formControlName="password" type="password">
+        <button class="mt-3 btn btn-lg btn-block btn-outline-primary">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

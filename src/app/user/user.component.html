@@ -1,0 +1,13 @@
+<div *ngIf="user" class="row-fluid">
+  <div class="span2" >
+    <img src="{{user.image}}" class="img-circle">
+  </div>
+
+  <div class="span8">
+      <h3>Name: {{user.name}}</h3>
+      <h6>Email: {{user.email}}</h6>
+      <h6>Created: {{user.created_at | date:'fullDate'}}</h6>
+      <h6>Last Updated: {{user.updated_at | date:'fullDate'}}</h6>
+  </div>
+</div>
+

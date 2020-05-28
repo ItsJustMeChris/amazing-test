@@ -1,0 +1,15 @@
+<form [formGroup]="product" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <span *ngIf="product.controls['id'].invalid && (product.controls['id'].dirty || product.controls['id'].touched)">Invalid ID</span>
+    <input class="form-control mb-3" formControlName="id" placeholder="id" type="number">
+    <span *ngIf="product.controls['name'].invalid && (product.controls['name'].dirty || product.controls['name'].touched)">Invalid Name</span>
+    <input class="form-control mb-3" formControlName="name" placeholder="name" type="text">
+    <span *ngIf="product.controls['description'].invalid && (product.controls['description'].dirty || product.controls['description'].touched)">Invalid Description</span>
+    <input class="form-control mb-3" formControlName="description" placeholder="description" type="text">
+    <span *ngIf="product.controls['price'].invalid && (product.controls['price'].dirty || product.controls['price'].touched)">Invalid Price</span>
+    <input class="form-control mb-3" formControlName="price" placeholder="price" type="text">
+    <span *ngIf="product.controls['image'].invalid && (product.controls['image'].dirty || product.controls['image'].touched)">Invalid Image</span>
+    <input class="form-control mb-3" formControlName="image" placeholder="image" type="text">
+    <button class="btn btn-primary">Add Product</button>
+  </div>
+</form>
